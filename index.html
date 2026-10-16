@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Pelajaran 2: Naek Ayun — Budaya dan Basa Kutai</title>
+<style>
+:root{
+--bg:#faf5e9;--teks:#3e2723;--h2:#5d4037;--h3:#4e342e;
+--kartu:#fff;--border:#d7c9a3;--emas:#d4af37;--emas-terang:#ffd700;
+--catatan:#fff8e1;--genap:#fff8e1;--tip-bg:#fff0b3;--tip-teks:#3e2723;--tip-border:#b7952b;
+--th:#3e2723;--td-garis:#e6d5a0;--td-kata:#4e342e;--code-bg:#eee;
+--gelap-bg:#3e2723;--gelap-teks:#f5e6c4;
+--stagger-dur:500ms;--stagger-distance:12px;--stagger-stagger:40ms;--stagger-blur:3px;--stagger-ease:cubic-bezier(0.22, 1, 0.36, 1);
+}
+html[data-theme="dark"]{
+--bg:#1a120b;--teks:#f3e8d3;--h2:#ffd700;--h3:#ffd700;
+--kartu:#2a1e14;--border:#6b543a;
+--catatan:#33261a;--genap:#33261a;--tip-bg:#4a3400;--tip-teks:#ffe9a8;--tip-border:#d4af37;
+--th:#0f0a06;--td-garis:#6b543a;--td-kata:#ffd700;--code-bg:#4e342e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--teks);line-height:1.7}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header{background:#3e2723;color:#f5e6c4;position:sticky;top:0;z-index:10;border-bottom:3px solid #d4af37}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;flex-wrap:wrap;gap:8px}
+header strong{color:#ffd700;font-size:1.05rem}
+.head-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+nav a{color:#f5e6c4;text-decoration:none;margin-left:14px;font-size:.9rem}
+nav a:hover{color:#ffd700}
+.tema-btn{background:transparent;color:#ffd700;border:1px solid #d4af37;border-radius:20px;padding:5px 14px;font-size:.8rem;cursor:pointer;font-family:inherit}
+.tema-btn:hover{background:#4e342e}
+.hero{background:#3e2723;color:#f5e6c4;padding:48px 0 40px;border-bottom:6px double #d4af37;text-align:center}
+.hero .kicker{display:inline-block;border:1px solid #d4af37;color:#ffd700;padding:4px 14px;border-radius:20px;font-size:.8rem;letter-spacing:1px;margin-bottom:14px}
+.hero h1{font-size:2.2rem;color:#ffd700;margin-bottom:10px}
+.hero p{max-width:640px;margin:0 auto;color:#efe0bd}
+.tujuan{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap;justify-content:center}
+.tujuan div{background:#4e342e;border:1px solid #d4af37;border-radius:10px;padding:14px 16px;max-width:340px;text-align:left;font-size:.92rem}
+.tujuan b{color:#ffd700}
+section{padding:36px 0}
+section h2{color:var(--h2);border-bottom:3px solid var(--emas);display:inline-block;padding-bottom:4px;margin-bottom:16px;font-size:1.5rem}
+section h3{margin:22px 0 8px;color:var(--h3)}
+.card{background:var(--kartu);color:var(--teks);border:1px solid var(--border);border-left:6px solid var(--emas);border-radius:10px;padding:16px 18px;margin:12px 0}
+.card b{color:var(--h2)}
+figure{margin:18px 0;background:var(--kartu);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+figure img{width:100%;display:block;height:auto}
+.hero-img{width:100%;max-width:640px;border-radius:10px;border:2px solid #d4af37;margin:18px auto;display:block;height:auto}
+.ph{background:linear-gradient(135deg,#3e2723,#6d4c41 60%,#a67c00);color:#ffe9a8;text-align:center;padding:44px 20px}
+.ph span{display:inline-block;border:1px solid #ffd700;border-radius:20px;padding:4px 12px;font-size:.75rem;margin-bottom:10px}
+.ph p{font-size:.9rem}
+figcaption{padding:10px 14px;font-size:.85rem;background:var(--catatan);color:var(--teks);border-top:1px solid var(--border)}
+figcaption code{background:var(--code-bg);color:var(--teks);padding:1px 6px;border-radius:4px;font-size:.8rem}
+.catatan{background:var(--catatan);color:var(--teks);border:1px solid var(--emas);border-radius:10px;padding:16px 18px;margin-top:16px}
+ol.latihan{margin:12px 0 0 22px}
+ol.latihan li{margin:10px 0;background:var(--kartu);color:var(--teks);padding:10px 14px;border-radius:8px;border:1px solid var(--border);list-style-position:inside}
+.tip{font-size:.9rem;font-weight:600;background:var(--tip-bg);color:var(--tip-teks);border:2px solid var(--tip-border);border-radius:8px;padding:12px 16px;margin-top:14px;animation:tip-glow 2s ease-in-out infinite alternate}
+@keyframes tip-glow{from{box-shadow:0 0 0 0 rgba(212,175,55,0)}to{box-shadow:0 0 14px 2px rgba(212,175,55,.55)}}
+.kamus{width:100%;border-collapse:collapse;background:var(--kartu);color:var(--teks);border-radius:10px;overflow:hidden;font-size:.92rem}
+.kamus th{background:var(--th);color:var(--emas-terang);text-align:left;padding:10px 14px}
+.kamus td{padding:9px 14px;border-bottom:1px solid var(--td-garis)}
+.kamus tr:nth-child(even) td{background:var(--genap)}
+.kamus td:first-child{font-weight:700;color:var(--td-kata);white-space:nowrap}
+.kamus-wrap{overflow-x:auto;margin-top:14px;border:1px solid var(--border);border-radius:10px}
+.dengar-btn{display:inline-flex;align-items:center;gap:6px;background:var(--emas);color:#3e2723;border:1px solid var(--emas);border-radius:20px;padding:6px 16px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;margin-top:10px}
+.dengar-btn:hover{filter:brightness(.92);transform:translateY(-1px)}
+.dengar-btn svg{flex:none}
+.dengar-btn.is-main{background:#3e2723;color:#ffd700;border-color:#3e2723}
+html[data-theme="dark"] .dengar-btn.is-main{background:#ffd700;color:#3e2723;border-color:#ffd700}
+.audio-bar{display:flex;align-items:center;gap:10px;margin-top:10px;max-width:480px}
+.audio-time{font-size:.8rem;color:var(--teks);white-space:nowrap;font-variant-numeric:tabular-nums}
+.audio-scrub{flex:1;appearance:none;-webkit-appearance:none;height:24px;border-radius:3px;background:var(--border);background-clip:content-box;padding:9px 0;outline:none;cursor:pointer}
+.audio-scrub::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--emas);border:2px solid #3e2723;cursor:pointer}
+.audio-scrub::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--emas);border:2px solid #3e2723;cursor:pointer}
+.audio-scrub::-moz-range-track{height:6px;border-radius:3px;background:var(--border)}
+.t-stagger-line{display:block;opacity:0;transform:translateY(var(--stagger-distance));filter:blur(var(--stagger-blur));transition:opacity var(--stagger-dur) var(--stagger-ease),transform var(--stagger-dur) var(--stagger-ease),filter var(--stagger-dur) var(--stagger-ease);will-change:transform,opacity,filter}
+.t-stagger-line--2{transition-delay:var(--stagger-stagger)}
+.t-stagger-line--3{transition-delay:calc(var(--stagger-stagger) * 2)}
+.t-stagger.is-shown .t-stagger-line{opacity:1;transform:translateY(0);filter:blur(0)}
+[data-reveal]{opacity:0;translate:0 12px;transition:opacity 500ms ease,translate 500ms cubic-bezier(0.22,1,0.36,1)}
+[data-reveal].is-in{opacity:1;translate:0 0}
+@media (prefers-reduced-motion: reduce){.t-stagger-line,[data-reveal]{transition:none !important;opacity:1 !important;transform:none !important;translate:0 0 !important;filter:none !important}.tip{animation:none !important;box-shadow:none !important}}
+footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font-size:.85rem;border-top:3px solid #d4af37}
+@media(max-width:600px){.hero h1{font-size:1.6rem}nav a{margin:0 10px 0 0}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<strong>Pelajaran 2: Naek Ayun</strong>
+<div class="head-right">
+<nav><a href="#bacaan">Bacaan</a><a href="#urutan">Urutan</a><a href="#makna">Makna</a><a href="#kamus">Kamus</a><a href="#latihan">Latihan</a></nav>
+<button class="tema-btn" id="temaBtn" type="button">Tema: Terang</button>
+</div>
+</div>
+</header>
+
+<div class="hero">
+<div class="wrap t-stagger" id="heroStagger">
+<span class="kicker t-stagger-line t-stagger-line--1">BUDAYA DAN BASA KUTAI</span>
+<h1 class="t-stagger-line t-stagger-line--2">Naek Ayun</h1>
+<img class="hero-img" src="assets/gambar-2-naek-ayun.jpg" alt="Upacara adat Naek Ayun" loading="lazy">
+<p class="t-stagger-line t-stagger-line--3">Acara emberi nama kahak ya baru lahir dalam adat urang Kutai disebut Naek Ayun. Tradisi ni simbol tanda besyukur atas kelahiran kahak, ngan tetap enjaga adat tradisi Naek Ayun. Urang Kutai endik hanya mewarisi adat leluhur, tapi jua embangun kekhasan budaya lokal.</p>
+<div class="tujuan">
+<div><b>Tujuan 1:</b> Memahami latar belakang prosesi dan pelaksanaan acara Naek Ayun.</div>
+<div><b>Tujuan 2:</b> Menyimpulkan latar belakang prosesi pelaksanaan acara Naek Ayun.</div>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+
+<section id="bacaan" data-reveal>
+<h2>A. Ayo Endengarkan</h2>
+<p><b>1. Dengarkan guru atau membacakan bacaan di bawah dengan saksama!</b></p>
+<div><button class="dengar-btn" type="button" id="audioBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Dengarkan Bacaan</span></button></div>
+<audio id="audioTradisi" preload="metadata" src="assets/suara-tradisi-naek-ayun.mp3"></audio>
+<div class="audio-bar"><span class="audio-time" id="audioCur">0:00</span><input class="audio-scrub" type="range" id="audioScrub" min="0" max="100" value="0" step="0.1" aria-label="Geser posisi bacaan"><span class="audio-time" id="audioDur">0:00</span></div>
+<h3>Tradisi Naek Ayun di Masyarakat Kutai</h3>
+<p>Urang Kutai di Kalimantan Timur berempu bermacam ragam tradisi ngan adat ya kaya makna ngan sarat nilai budaya. Salah sebuting tradisi penting ya lestari sampai wayah ni adalah Naek Ayun, yaitu upacara adat ya diacarakan kan nyambut kelahiran sorang bayi. Tradisi ni enjadi simbul rasa syukur sekaligus harapan kan masa depan si kahak.</p>
+
+<figure>
+<img src="assets/gambar-2-1-dekorasi-naek-ayun.jpg" alt="Dekorasi upacara adat Naek Ayun" loading="lazy">
+<figcaption>Gambar 2.1 Dekorasi upacara adat Naek Ayun</figcaption>
+</figure>
+
+<p>Naek Ayun biasanya diacarakan wayah bayi beumur antara 7 hingga 40 hari, tegantong kecocokan bilangan harinya ngan kesiapan acara. Bearti menaekkan kahak ke ayunan, dalam budaya urang Kutai dipolah ngan acara khusus melibatkan doa-doa, simbol-simbol adat, makna agama, makna keilahian ngan ditulungi oleh masyarakat sekitar.</p>
+</section>
+
+<section id="urutan" data-reveal>
+<h2>Urutan Acara Naek Ayun</h2>
+
+<div class="card"><b>a. Persiapan Ayunan</b><br>Ayunan tradisional disiapkan ngan bahan-bahan ya didapat di sekitar kediaman masyarakat, biasanya tajong Samarenda, ngan tali penjalin (kayu hui). Ayunan ni dihiasi ngan macam-macam kain bekelir ngan simbol-simbol pelindung penulak bala tulak bahaya.</div>
+
+<div class="card"><b>b. Upacara Ngan Doa</b><br>Wayah acara dimulai, urang etuha adat atau urang ya dituhakan embacakan doa-doa pakai keselamatan, kesehatan, kan masa hadapan hidup si kahak. Doa ni bisa jua diiringi ngan pembacaan ayat suci Al-Quran, jika keluarganya Muslim.</div>
+
+<div class="card"><b>c. Naek Ayun</b><br>Si kahak kan dinaekkan ke ayunan ngan peumpamaan maha. Wayah ni, doa ngan berkah keroan tamu, disimbolkan ngan mehambur beras kuning atau kembang tujuh rupa.</div>
+
+<div class="card"><b>d. Emberi Nama</b><br>Dalam upacara naek ayun ya laen, acara ni jua dibayakan ngan emberi nama si kahak ya disebut akekah.</div>
+
+<div class="card"><b>e. Emberi Hadiah</b><br>Tamu undangan jua biasanya rancak embawa hadiah tanda umpat bungah atas kehadiran si kahak tu.</div>
+
+<figure>
+<img src="assets/gambar-2-2-upacara-naek-ayun.jpg" alt="Upacara Naek Ayun tanda bersyukur kepada Allah SWT" loading="lazy">
+<figcaption>Gambar 2.2 Upacara Naek Ayun tanda bersyukur kepada Allah SWT.</figcaption>
+</figure>
+</section>
+
+<section id="makna" data-reveal>
+<h2>Makna dan Nilai Tradisi</h2>
+<p>Upacara adat Naek Ayun endik hanya tanda besyukur atas kelahiran, tapi jua simbol diterimanya si kahak dalam keroan kehidupan sosial ngan adat. Inya enggambarkan hubungan baek antara manusia, alam, ngan leluhur, jua ni negaskan bahwa pentingnya nilai-nilai hidup betulungan dalam kehidupan urang Kutai.</p>
+<p style="margin-top:10px">Ngan tetap enjaga adat tradisi naek ayun, urang Kutai endik hanya mewarisi adat leluhur, tapi jua embangun kekhasan budaya lokal ya kuat pakai generasi kan datang sebagai identitas ya mesti terus hidup. Tradisi ni enjadi kekayaan budaya bangsa Indonesia ya patut dikenali, hormati ngan dihargai.</p>
+
+<div class="catatan"><b>Catatan:</b><br>Acara naek ayun dan akikah mengandung berbagai nilai moral positif, di antaranya penguatan nilai agama, pelestarian budaya, silaturrahmi, dan kebhinekaan.</div>
+
+<figure>
+<img src="assets/gambar-2-3-kelahiran-kahak.jpg" alt="Kelahiran ahak jadi suka cita bagi keluarga" loading="lazy">
+<figcaption>Gambar 2.3 Kelahiran ahak jadi suka cita bagi keluarga.</figcaption>
+</figure>
+</section>
+
+<section id="kamus" data-reveal>
+<h2>Kamus Mini Bahasa Kutai</h2>
+<p>Daftar kosakata bahasa Kutai yang terdapat dalam teks materi <b>Naek Ayun</b> beserta padanannya dalam bahasa Indonesia:</p>
+<div class="kamus-wrap">
+<table class="kamus">
+<tr><th>Kata (Bahasa Kutai)</th><th>Arti (Bahasa Indonesia)</th></tr>
+<tr><td>berempu</td><td>mempunyai / memiliki</td></tr>
+<tr><td>betulungan</td><td>gotong-royong / tolong-menolong</td></tr>
+<tr><td>bungah</td><td>senang / gembira</td></tr>
+<tr><td>diacarakan</td><td>diadakan / diselenggarakan</td></tr>
+<tr><td>dipolah</td><td>dibuat</td></tr>
+<tr><td>dituhakan</td><td>dituakan</td></tr>
+<tr><td>embacakan</td><td>membacakan</td></tr>
+<tr><td>embangun</td><td>membangun</td></tr>
+<tr><td>embawa</td><td>membawa</td></tr>
+<tr><td>emberi</td><td>memberi</td></tr>
+<tr><td>endik</td><td>tidak</td></tr>
+<tr><td>enjaga</td><td>menjaga</td></tr>
+<tr><td>enjadi</td><td>menjadi</td></tr>
+<tr><td>etuha</td><td>tua / pemuka</td></tr>
+<tr><td>jua</td><td>juga</td></tr>
+<tr><td>kahak</td><td>bayi / anak</td></tr>
+<tr><td>kan</td><td>untuk / kepada</td></tr>
+<tr><td>keroan</td><td>kerabat / keluarga</td></tr>
+<tr><td>mehambur</td><td>menaburkan / menghamburkan</td></tr>
+<tr><td>ngan</td><td>dengan / dan</td></tr>
+<tr><td>ni</td><td>ini</td></tr>
+<tr><td>nyambut</td><td>menyambut</td></tr>
+<tr><td>rancak</td><td>sering</td></tr>
+<tr><td>sebuting</td><td>sebuah / salah satu</td></tr>
+<tr><td>sorang</td><td>seorang</td></tr>
+<tr><td>tegantong</td><td>tergantung</td></tr>
+<tr><td>tu</td><td>itu</td></tr>
+<tr><td>umpat</td><td>ikut</td></tr>
+<tr><td>urang</td><td>orang</td></tr>
+<tr><td>wayah ni</td><td>saat ini / sekarang</td></tr>
+</table>
+</div>
+<div class="tip">Salin kamus mini di atas ke buku catatan masing-masing untuk membantu memahami bacaan dan mengerjakan latihan.</div>
+</section>
+
+<section id="latihan" data-reveal>
+<h2>Soal Latihan</h2>
+<p><b>2. Jawap hak petanyaan di bawah ni!</b></p>
+<ol class="latihan" type="a">
+<li>Upacara adat nyambut kelahiran ....</li>
+<li>Acara tradisi Naek Ayun simbol rasa ... kepada Allah.</li>
+<li>Naek Ayun diacarakan wayah kahak beumur antara ... hingga ... hari.</li>
+<li>Ayunan tradisional biasanya kain tenun ..., ngan tali ....</li>
+<li>Doa ngan berkah tamu disimbolkan ngan mehambur ... atau ... tujuh rupa.</li>
+</ol>
+<div class="tip">Salin soal di atas ke buku tugas masing-masing, lalu jawab dengan lengkap.</div>
+</section>
+
+</div>
+
+<footer>Materi Bahasa Kutai — Pelajaran 2: Naek Ayun &bull; Dibuat oleh : Arifin Hakim, S.Pd. - Guru Kelas 4C</footer>
+
+<script>
+(function(){
+var btn=document.getElementById('temaBtn');
+function setT(t){document.documentElement.setAttribute('data-theme',t);btn.textContent='Tema: '+(t==='dark'?'Gelap':'Terang');try{localStorage.setItem('naek-ayun-tema',t);}catch(e){}}
+var saved=null;
+try{saved=localStorage.getItem('naek-ayun-tema');}catch(e){}
+if(saved==='dark'||saved==='light'){setT(saved);}
+else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){setT('dark');}
+btn.addEventListener('click',function(){
+var cur=document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light';
+setT(cur==='dark'?'light':'dark');
+});
+var hero=document.getElementById('heroStagger');
+if(hero){requestAnimationFrame(function(){requestAnimationFrame(function(){void hero.offsetHeight;hero.classList.add('is-shown');});});}
+var revs=document.querySelectorAll('[data-reveal]');
+if('IntersectionObserver' in window&&revs.length){
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});},{threshold:0.12});
+revs.forEach(function(el){io.observe(el);});
+}else{revs.forEach(function(el){el.classList.add('is-in');});}
+var audioBtn=document.getElementById('audioBtn');
+var audioTradisi=document.getElementById('audioTradisi');
+if(audioBtn&&audioTradisi){
+var IKON_DENGAR='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+var IKON_STOP='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/></svg>';
+function setAudioBtn(main){audioBtn.innerHTML=(main?IKON_STOP:IKON_DENGAR)+'<span>'+(main?'Berhenti':'Dengarkan Bacaan')+'</span>';audioBtn.classList.toggle('is-main',main);}
+audioBtn.addEventListener('click',function(){
+if(audioTradisi.paused){audioTradisi.play();}
+else{audioTradisi.pause();setAudioBtn(false);}
+});
+audioTradisi.addEventListener('play',function(){setAudioBtn(true);});
+audioTradisi.addEventListener('pause',function(){setAudioBtn(false);});
+audioTradisi.addEventListener('ended',function(){setAudioBtn(false);audioTradisi.currentTime=0;});
+var audioScrub=document.getElementById('audioScrub');
+var audioCur=document.getElementById('audioCur');
+var audioDur=document.getElementById('audioDur');
+function fmtWaktu(d){d=Math.max(0,Math.floor(d||0));return Math.floor(d/60)+':'+('0'+(d%60)).slice(-2);}
+if(audioScrub&&audioCur&&audioDur){
+var lagiGeser=false;
+audioTradisi.addEventListener('loadedmetadata',function(){audioDur.textContent=fmtWaktu(audioTradisi.duration);});
+audioTradisi.addEventListener('timeupdate',function(){
+if(!lagiGeser&&audioTradisi.duration){audioScrub.value=(audioTradisi.currentTime/audioTradisi.duration)*100;}
+audioCur.textContent=fmtWaktu(audioTradisi.currentTime);
+});
+audioScrub.addEventListener('pointerdown',function(){lagiGeser=true;});
+audioScrub.addEventListener('pointerup',function(){lagiGeser=false;});
+audioScrub.addEventListener('input',function(){
+if(audioTradisi.duration){audioTradisi.currentTime=(parseFloat(audioScrub.value)/100)*audioTradisi.duration;}
+audioCur.textContent=fmtWaktu(audioTradisi.currentTime);
+});
+}
+}else if(audioBtn){audioBtn.style.display='none';}
+})();
+</script>
+
+</body>
+</html>
