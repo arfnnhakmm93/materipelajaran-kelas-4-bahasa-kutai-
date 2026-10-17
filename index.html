@@ -321,6 +321,7 @@ audioCur.textContent=fmtWaktu(audioTradisi.currentTime);
 }
 }else{bukaLatihan(true);}
 var petunjukBtn=document.getElementById('petunjukBtn');
+var TEKS_PEMBUKA='Assalamualaikum warahmatullahi wabarakatuh. Selamat datang di materi Budaya dan Basa Kutai, Pelajaran 2: Naek Ayun. Silakan simak petunjuk kegiatan berikut dengan saksama.';
 var TEKS_LANGKAH='Satu, klik tombol Dengarkan Bacaan, lalu simak sambil mengikuti teks bacaannya dengan saksama. Dua, salin kamus mini ke buku catatan. Tiga, jawap hak petanyaan di bawah ni setelah bacaan selesai didengarkan.';
 var KATA_URUT=['pertama','kedua','ketiga','keempat'];
 function teksTujuan(){
@@ -332,7 +333,7 @@ if(t){out+=' '+t;}
 }
 return out;
 }
-function teksLengkap(){var t=teksTujuan();return (t?'Tujuan pembelajaran.'+t+' ':'')+'Petunjuk kegiatan. '+TEKS_LANGKAH;}
+function teksLengkap(){var t=teksTujuan();return TEKS_PEMBUKA+(t?' Tujuan pembelajaran.'+t+' ':'')+'Petunjuk kegiatan. '+TEKS_LANGKAH;}
 function setPetunjukBtn(bicara){if(!petunjukBtn){return;}petunjukBtn.innerHTML=(bicara?IKON_STOP:IKON_DENGAR)+'<span>'+(bicara?'Berhenti':'Dengarkan Petunjuk Kegiatan')+'</span>';petunjukBtn.classList.toggle('is-main',bicara);}
 function hentikanPetunjuk(){jalurPetunjuk++;clearTimeout(timerGagal);if(window.speechSynthesis){window.speechSynthesis.cancel();}setPetunjukBtn(false);}
 if(petunjukBtn){
