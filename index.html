@@ -69,7 +69,7 @@ figure:hover img{transform:scale(1.02)}
 figcaption{padding:10px 14px;font-size:.85rem;background:var(--catatan);color:var(--teks);border-top:1px solid var(--border)}
 figcaption code{background:var(--code-bg);color:var(--teks);padding:1px 6px;border-radius:4px;font-size:.8rem}
 .catatan{background:var(--catatan);color:var(--teks);border:1px solid var(--emas);border-radius:10px;padding:16px 18px;margin-top:16px}
-ol.latihan{margin:12px 0 0 22px}
+ol.latihan{margin:12px 0 0 22px;list-style-type:lower-alpha}
 ol.latihan li{margin:10px 0;background:var(--kartu);color:var(--teks);padding:10px 14px;border-radius:8px;border:1px solid var(--border);list-style-position:inside}
 .tip{font-size:.9rem;font-weight:600;background:var(--tip-bg);color:var(--tip-teks);border:2px solid var(--tip-border);border-radius:8px;padding:12px 16px;margin-top:14px;animation:tip-glow 2s ease-in-out infinite alternate}
 @keyframes tip-glow{from{box-shadow:0 0 0 0 rgba(212,175,55,0)}to{box-shadow:0 0 14px 2px rgba(212,175,55,.55)}}
@@ -104,6 +104,9 @@ html[data-theme="dark"] .dengar-btn.is-main{background:#ffd700;color:#3e2723;bor
 footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font-size:.85rem;border-top:3px solid #d4af37}
 @media(max-width:600px){.hero h1{font-size:1.6rem}header .wrap{flex-direction:column;align-items:stretch}nav{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}nav a{white-space:nowrap;flex:none}.head-right{width:100%;justify-content:space-between}}
 </style>
+<script>
+(function(){try{var t=localStorage.getItem('naek-ayun-tema');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();
+</script>
 </head>
 <body>
 
@@ -122,7 +125,7 @@ footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font
 <span class="kicker t-stagger-line t-stagger-line--1">BUDAYA DAN BASA KUTAI</span>
 <div class="t-stagger-line t-stagger-line--2"><button class="dengar-btn" type="button" id="petunjukBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg><span>Dengarkan Petunjuk Kegiatan</span></button></div>
 <h1 class="t-stagger-line t-stagger-line--2">Naek Ayun</h1>
-<img class="hero-img" src="assets/gambar-2-naek-ayun.jpg" alt="Upacara adat Naek Ayun" loading="lazy">
+<img class="hero-img" src="assets/gambar-2-naek-ayun.jpg" alt="Upacara adat Naek Ayun" loading="eager" decoding="async" width="1200" height="896">
 <p class="t-stagger-line t-stagger-line--3">Acara emberi nama kahak ya baru lahir dalam adat urang Kutai disebut Naek Ayun. Tradisi ni simbol tanda besyukur atas kelahiran kahak, ngan tetap enjaga adat tradisi Naek Ayun. Urang Kutai endik hanya mewarisi adat leluhur, tapi jua embangun kekhasan budaya lokal.</p>
 <div class="tujuan">
 <div><b>Tujuan 1:</b> Memahami latar belakang prosesi dan pelaksanaan acara Naek Ayun.</div>
@@ -145,7 +148,7 @@ footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font
 <p>Urang Kutai di Kalimantan Timur berempu bermacam ragam tradisi ngan adat ya kaya makna ngan sarat nilai budaya. Salah sebuting tradisi penting ya lestari sampai wayah ni adalah Naek Ayun, yaitu upacara adat ya diacarakan kan nyambut kelahiran sorang bayi. Tradisi ni enjadi simbul rasa syukur sekaligus harapan kan masa depan si kahak.</p>
 
 <figure>
-<img src="assets/gambar-2-1-dekorasi-naek-ayun.jpg" alt="Dekorasi upacara adat Naek Ayun" loading="lazy">
+<img src="assets/gambar-2-1-dekorasi-naek-ayun.jpg" alt="Dekorasi upacara adat Naek Ayun" loading="lazy" decoding="async" width="1200" height="896">
 <figcaption>Gambar 2.1 Dekorasi upacara adat Naek Ayun</figcaption>
 </figure>
 
@@ -166,7 +169,7 @@ footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font
 <div class="card"><b>e. Emberi Hadiah</b><br>Tamu undangan jua biasanya rancak embawa hadiah tanda umpat bungah atas kehadiran si kahak tu.</div>
 
 <figure>
-<img src="assets/gambar-2-2-upacara-naek-ayun.jpg" alt="Upacara Naek Ayun tanda bersyukur kepada Allah SWT" loading="lazy">
+<img src="assets/gambar-2-2-upacara-naek-ayun.jpg" alt="Upacara Naek Ayun tanda bersyukur kepada Allah SWT" loading="lazy" decoding="async" width="1200" height="896">
 <figcaption>Gambar 2.2 Upacara Naek Ayun tanda bersyukur kepada Allah SWT.</figcaption>
 </figure>
 </section>
@@ -179,7 +182,7 @@ footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font
 <div class="catatan"><b>Catatan:</b><br>Acara naek ayun dan akikah mengandung berbagai nilai moral positif, di antaranya penguatan nilai agama, pelestarian budaya, silaturrahmi, dan kebhinekaan.</div>
 
 <figure>
-<img src="assets/gambar-2-3-kelahiran-kahak.jpg" alt="Kelahiran ahak jadi suka cita bagi keluarga" loading="lazy">
+<img src="assets/gambar-2-3-kelahiran-kahak.jpg" alt="Kelahiran ahak jadi suka cita bagi keluarga" loading="lazy" decoding="async" width="1200" height="896">
 <figcaption>Gambar 2.3 Kelahiran ahak jadi suka cita bagi keluarga.</figcaption>
 </figure>
 </section>
@@ -229,7 +232,7 @@ footer{background:#3e2723;color:#cbb98a;text-align:center;padding:22px 10px;font
 <h2>Soal Latihan</h2>
 <p id="latihanPesan" class="tip" hidden>Audio bacaan tidak dapat diputar, jadi soal dibuka otomatis. Tanyakan guru kalau audio harus didengarkan.</p>
 <p><b>2. Jawap hak petanyaan di bawah ni!</b></p>
-<ol class="latihan" type="a">
+<ol class="latihan">
 <li>Upacara adat nyambut kelahiran ....</li>
 <li>Acara tradisi Naek Ayun simbol rasa ... kepada Allah.</li>
 <li>Naek Ayun diacarakan wayah kahak beumur antara ... hingga ... hari.</li>
@@ -289,7 +292,7 @@ var audioTradisi=document.getElementById('audioTradisi');
 if(audioBtn&&audioTradisi){
 function setAudioBtn(main){audioBtn.innerHTML=(main?IKON_STOP:IKON_DENGAR)+'<span>'+(main?'Berhenti':'Dengarkan Bacaan')+'</span>';audioBtn.classList.toggle('is-main',main);}
 audioBtn.addEventListener('click',function(){
-if(audioTradisi.paused){audioTradisi.play();}
+if(audioTradisi.paused){var p=audioTradisi.play();if(p&&p.catch){p.catch(function(){bukaLatihan(true);});}}
 else{audioTradisi.pause();setAudioBtn(false);}
 });
 audioTradisi.addEventListener('play',function(){setAudioBtn(true);hentikanPetunjuk();});
@@ -309,6 +312,8 @@ audioCur.textContent=fmtWaktu(audioTradisi.currentTime);
 });
 audioScrub.addEventListener('pointerdown',function(){lagiGeser=true;});
 audioScrub.addEventListener('pointerup',function(){lagiGeser=false;});
+audioScrub.addEventListener('pointercancel',function(){lagiGeser=false;});
+window.addEventListener('pointerup',function(){lagiGeser=false;});
 audioScrub.addEventListener('input',function(){
 if(audioTradisi.duration){audioTradisi.currentTime=(parseFloat(audioScrub.value)/100)*audioTradisi.duration;}
 audioCur.textContent=fmtWaktu(audioTradisi.currentTime);
@@ -329,11 +334,11 @@ return out;
 }
 function teksLengkap(){var t=teksTujuan();return (t?'Tujuan pembelajaran.'+t+' ':'')+'Petunjuk kegiatan. '+TEKS_LANGKAH;}
 function setPetunjukBtn(bicara){if(!petunjukBtn){return;}petunjukBtn.innerHTML=(bicara?IKON_STOP:IKON_DENGAR)+'<span>'+(bicara?'Berhenti':'Dengarkan Petunjuk Kegiatan')+'</span>';petunjukBtn.classList.toggle('is-main',bicara);}
-function hentikanPetunjuk(){jalurPetunjuk++;if(window.speechSynthesis){window.speechSynthesis.cancel();}setPetunjukBtn(false);}
+function hentikanPetunjuk(){jalurPetunjuk++;clearTimeout(timerGagal);if(window.speechSynthesis){window.speechSynthesis.cancel();}setPetunjukBtn(false);}
 if(petunjukBtn){
 if(!window.speechSynthesis||!window.SpeechSynthesisUtterance){petunjukBtn.style.display='none';bukaMateri(true);}
 else{
-var jalurPetunjuk=0;
+var jalurPetunjuk=0,timerGagal=null;
 function bacakanPetunjuk(potongan,idx,jalur){
 if(jalur!==jalurPetunjuk){return;}
 if(idx>=potongan.length){setPetunjukBtn(false);bukaMateri(false);return;}
@@ -342,18 +347,22 @@ var u=new SpeechSynthesisUtterance(potongan[idx]);
 u.lang='id-ID';
 var suara=syn.getVoices().filter(function(v){return /^id/i.test(v.lang);})[0];
 if(suara){u.voice=suara;}
+u.onstart=function(){if(jalur!==jalurPetunjuk){return;}clearTimeout(timerGagal);};
 u.onend=function(){if(jalur!==jalurPetunjuk){return;}bacakanPetunjuk(potongan,idx+1,jalur);};
-u.onerror=function(){if(jalur!==jalurPetunjuk){return;}setPetunjukBtn(false);bukaMateri(true);};
+u.onerror=function(){if(jalur!==jalurPetunjuk){return;}clearTimeout(timerGagal);setPetunjukBtn(false);bukaMateri(true);};
 syn.speak(u);
 }
 petunjukBtn.addEventListener('click',function(){
 var syn=window.speechSynthesis;
-if(syn.speaking||syn.pending){hentikanPetunjuk();return;}
+if(syn.speaking||syn.pending){hentikanPetunjuk();bukaMateri(false);return;}
 if(audioTradisi&&!audioTradisi.paused){audioTradisi.pause();}
 var teks=teksLengkap();
 jalurPetunjuk++;
 syn.cancel();
 setPetunjukBtn(true);
+var jalurIni=jalurPetunjuk;
+clearTimeout(timerGagal);
+timerGagal=setTimeout(function(){if(jalurIni===jalurPetunjuk){setPetunjukBtn(false);bukaMateri(true);}},4000);
 bacakanPetunjuk(teks.match(/[^.!?]+[.!?]*/g)||[teks],0,jalurPetunjuk);
 });
 }
